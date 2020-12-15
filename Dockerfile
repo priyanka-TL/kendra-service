@@ -1,15 +1,15 @@
 FROM node:12
 
-WORKDIR /manage-learn-services/kendra-service
+WORKDIR /opt/kendra
 
 #copy package.json file
-COPY package.json /manage-learn-services/kendra-service
+COPY package.json /opt/kendra
 
 #install node packges
 RUN npm install
 
 #copy all files 
-COPY . /manage-learn-services/kendra-service
+COPY . /opt/kendra
 
 #expose the application port
 EXPOSE 4202
